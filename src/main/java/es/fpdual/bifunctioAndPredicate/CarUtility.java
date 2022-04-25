@@ -9,7 +9,7 @@ import es.fpdual.model.Car;
 
 public class CarUtility {
 
-    public List<Car> getCarsOf2010Onwards(List<Car> carList, Predicate<Car> eval) {
+    public List<Car> evaluate(List<Car> carList, Predicate<Car> eval) {
         List<Car> newList = new ArrayList<>();
 
         for (Car car : carList) {

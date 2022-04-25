@@ -16,7 +16,7 @@ public class BifunctionAndPredicateMain {
 
         CarUtility utility = new CarUtility();
 
-        List<Car> carsOf2010OnwardsList = utility.getCarsOf2010Onwards(carList, car -> car.getLicenseAge() > 2010);
+        List<Car> carsOf2010OnwardsList = utility.evaluate(carList, car -> car.getLicenseAge() > 2010);
 
         for (Car car : carsOf2010OnwardsList) {
             double newPrice = utility.priceIncremet(car, 10, (price, increment) -> price + (price * (increment / 100)));
