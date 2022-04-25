@@ -18,17 +18,21 @@ public class BifunctionAndPredicateMain {
 
         List<Car> carsOf2010OnwardsList = utility.evaluate(carList, car -> car.getLicenseAge() > 2010);
 
-        for (Car car : carsOf2010OnwardsList) {
+        List<Car> notSkodaCars = utility.evaluateNegatively(carsOf2010OnwardsList,
+                car -> car.getBrand().equals("Skoda"));
+
+        for (Car car : notSkodaCars) {
             double newPrice = utility.priceIncremet(car, 10, (price, increment) -> price + (price * (increment / 100)));
 
             car.setPrice(newPrice);
         }
 
-        System.out.println("Price updated in cars of 2010 onwards: ");
+        System.out.println("Price updated in cars that are not Skoda of 2010 onwards: ");
         for (Car car : carList) {
             System.out
                     .println(
-                            "Model: " + car.getModel() + " | Brand: " + car.getBrand() + " | Price: " + car.getPrice());
+                            "Model: " + car.getModel() + " | Brand: " + car.getBrand() + " | Price: " + car.getPrice()
+                                    + " | Age: " + car.getLicenseAge());
         }
     }
 

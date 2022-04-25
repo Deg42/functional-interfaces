@@ -20,6 +20,17 @@ public class CarUtility {
         return newList;
     }
 
+    public List<Car> evaluateNegatively(List<Car> carList, Predicate<Car> eval) {
+        List<Car> newList = new ArrayList<>();
+
+        for (Car car : carList) {
+            if (eval.negate().test(car))
+                newList.add(car);
+        }
+
+        return newList;
+    }
+
     public double priceIncremet(Car car, double increment, BiFunction<Double, Double, Double> bi) {
         return bi.apply(car.getPrice(), increment);
     }
