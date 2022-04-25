@@ -1,4 +1,4 @@
-package es.fpdual.functions;
+package es.fpdual.function;
 
 import java.util.ArrayList;
 import java.util.Arrays;
