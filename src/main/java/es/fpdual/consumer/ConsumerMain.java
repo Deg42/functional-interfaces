@@ -12,12 +12,12 @@ public class ConsumerMain {
         cons.accept("Example");
 
         List<Student> studentList = Arrays.asList(
-                new Student("Juan", 9.2),
-                new Student("Pepe", 7.5),
-                new Student("Adri", 4.1),
-                new Student("Laura", 3.6),
-                new Student("Fran", 10),
-                new Student("Christian", 9.8));
+                new Student(1, "Juan", 9.2),
+                new Student(2, "Pepe", 7.5),
+                new Student(3, "Adri", 4.1),
+                new Student(4, "Laura", 3.6),
+                new Student(5, "Fran", 10),
+                new Student(6, "Christian", 9.8));
 
         StudentOperations op = new StudentOperations();
 
