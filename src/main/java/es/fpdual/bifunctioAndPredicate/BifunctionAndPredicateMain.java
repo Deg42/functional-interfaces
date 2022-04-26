@@ -31,8 +31,10 @@ public class BifunctionAndPredicateMain {
         for (Car car : carList) {
             System.out
                     .println(
-                            "Model: " + car.getModel() + " | Brand: " + car.getBrand() + " | Price: " + car.getPrice()
-                                    + " | Age: " + car.getLicenseAge());
+                            "Model: " + car.getModel() +
+                             " | Brand: " + car.getBrand() + 
+                             " | Price: " + car.getPrice() +
+                             " | Age: " + car.getLicenseAge());
         }
     }
 
